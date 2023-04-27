@@ -115,11 +115,11 @@ public class Jogo {
 
     private boolean isJogadasParaBaixo() {
         for(int coluna = 0;coluna < 4;coluna++){
-            if(mapa[0][coluna] == 0){
+            if(mapa[3][coluna] == 0){
                 return true;
             }
             for(int linha = 3;linha > 0;linha--){
-                if(linha > 3 && mapa[linha][coluna] != 0 && Objects.equals(mapa[linha][coluna], mapa[linha - 1][coluna])){
+                if( mapa[linha][coluna] != 0 && Objects.equals(mapa[linha][coluna], mapa[linha - 1][coluna])){
                     return true;
                 }
                 if (linha > 2 && mapa[linha][coluna] != 0 && mapa[linha - 1][coluna] == 0 && mapa[linha - 2][coluna] != 0){
@@ -285,7 +285,7 @@ public class Jogo {
     private void imprimeMapa(){
         for(int i =0;i<4;i++){
             for(int k =0;k<4;k++){
-                System.out.print((mapa[i][k]==0?"_":mapa[i][k]) + " ");
+                System.out.print((mapa[i][k]==0?".":mapa[i][k]) + "\t");
             }
             System.out.println();
         }
