@@ -285,7 +285,7 @@ public class Jogo {
     private void imprimeMapa(){
         for(int i =0;i<4;i++){
             for(int k =0;k<4;k++){
-                System.out.print((mapa[i][k]==0?"_":mapa[i][k]) + " ");
+                System.out.print((mapa[i][k]==0?" ":mapa[i][k]) + "\t");
             }
             System.out.println();
         }
