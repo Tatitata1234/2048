@@ -311,7 +311,7 @@ public class Jogo {
                 }
             }
         }
-        return true;
+        return false;
     }
 
     private void recolheNumerosEsquerda(){
